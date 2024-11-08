@@ -19,7 +19,7 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 # Muon optimizer
 
 def zeropower_via_svd(G, steps=None):
-    U, S, V = G.svd()
+    U, S, V = G.svd() 
     return U @ V.T
 
 @torch.compile
